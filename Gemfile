@@ -16,6 +16,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'rails-bootstrap', '~> 3.0', '>= 3.0.0.4'
 gem 'bootstrap'
 gem 'simple_form'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

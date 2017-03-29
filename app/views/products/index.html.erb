@@ -1,3 +1,68 @@
-<h1>Каталог продукции</h1>
-<p><%= render "form" %></p>
-<%= link_to "create new user", new_user_path %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+
+
+
+
+</head>
+<body>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><%= @product.first.name %></div>
+        <div class="panel-body"><%= image_tag(@product.first.image,alt: "Степлер", size: "360x270") %></div>
+        <div class="panel-footer">Price <%= @product.first.price %></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-danger">
+        <div class="panel-heading"><%= @product.second.name %></div>
+        <div class="panel-body"><%= image_tag(@product.second.image,alt: "Точилка",size: "360x270") %></div>
+        <div class="panel-footer">Price <%= @product.second.price %></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-success">
+        <div class="panel-heading"><%= @product.third.name %></div>
+        <div class="panel-body"><%= image_tag(@product.third.image,alt: "Антистеплер",size: "360x270") %></div>
+        <div class="panel-footer">Price <%= @product.third.price %></div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><%= @product.fourth.name %></div>
+        <div class="panel-body"><%= image_tag(@product.fourth.image,alt: "Дырокол", size: "360x270") %></div>
+        <div class="panel-footer">Price <%= @product.fourth.price %></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><%= @product.fifth.name %></div>
+        <div class="panel-body"><%= image_tag(@product.fifth.image,alt: "Стерка", size: "360x270") %></div>
+        <div class="panel-footer">Price <%= @product.fifth.price %></div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading"><%= @product.last.name %></div>
+        <div class="panel-body"><%= image_tag(@product.last.image,alt: "Пенал",size: "360x270") %></div>
+        <div class="panel-footer">Price <%= @product.last.price %></div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+
+
+</body>
+</html>

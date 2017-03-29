@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-prod = {:"степлер"=>10, :"точилка"=>5, :"антистеплер"=>20, :"дырокол"=>30}
+prod = {:"Степлер"=>[10,"stepler.jpg"], :"Точилка"=>[5,"tochilka.jpg"], :"Антистеплер"=>[20,"antistep.jpg"],
+        :"Дырокол"=>[30,"dirokol.jpg"],:"Стерка"=>[15,"stirka.jpg"],:"Пенал"=>[50,"penal.jpg"]}
 prod.each do |key,value|
-  Product.create(name:"#{key}",price:"#{value}")
+  Product.create(name:"#{key}",price:"#{value[0]}",image:"#{value[1]}")
 end

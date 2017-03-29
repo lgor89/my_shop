@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     redirect_to root_path
   end
+
   private
 
   def user_params
