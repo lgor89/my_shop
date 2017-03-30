@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'orders/create'
 
-  root 'products#index'
+  root 'products#home'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

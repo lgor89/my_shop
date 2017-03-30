@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+  def home
+
+  end
   def index
     @product = Product.all
 
