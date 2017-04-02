@@ -11,6 +11,17 @@
  * file per style scope.
  */
 // Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "users";
 @import "products";
-  @import "bootstrap";
+@import "bootstrap";
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+  position: relative;
+  top: 120px;
+}
+.footer {
+  background-color: #CCCCCC;
+  padding-top: 20px;
+}
 
