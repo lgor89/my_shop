@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/signout', to: 'sessions#destroy'
+
   resources 'users'
   resources 'products'
   get 'orders/new'

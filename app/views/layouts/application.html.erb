@@ -44,30 +44,54 @@
 
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
+
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to "Home", root_path %></li>
         <li><%= link_to "Products", products_path %></li>
+        <% if logged_in? %>
         <li><a href="#">Deals</a></li>
         <li><a href="#">Stores</a></li>
         <li><a href="#">Contact</a></li>
+        <% end %>
       </ul>
+
       <ul class="nav navbar-nav navbar-right">
 
+        <%if logged_in? %>
         <li><%= link_to ('users#index') do %>
               <span class="glyphicon glyphicon-user"></span>&nbsp;Your Account
           <% end %>
         </li>
-
+        <% end %>
+        <%if !logged_in? %>
+        <li><%= link_to (login_path) do %>
+              <span class="glyphicon glyphicon-log-in"></span>&nbsp;Login
+          <% end %>
+        </li>
+        <% end %>
+            <%if !logged_in? %>
         <li><%= link_to (new_user_path) do %>
               <span class="glyphicon glyphicon-log-in"></span>&nbsp;Sign Up
               <% end %>
               </li>
-
+        <% end %>
+        <%if logged_in? %>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+
+        <li><%= link_to (signout_path),method: :delete do %>
+              <span class="glyphicon glyphicon-log-out"></span>&nbsp;SignOut
+          <% end %>
+        </li></li>
+        <% end %>
       </ul>
     </div>
   </div>
 </nav>
+<% flash.each do |message_type,message| %>
+<div class="alert alert-<%= message_type %>">
+<%= message %>
+</div>
+<%end%>
 
 <%= yield %>
 
